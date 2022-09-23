@@ -1,0 +1,52 @@
+.day-card{
+    text-align: center;
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    border-radius: 1rem;
+}
+
+.forecast-icon-wrapper{
+    padding-bottom: 0.5em;
+    img{
+        width: 1.5rem;
+    }
+}
+
+.forecast-temperature-wrapper{
+    display: flex;
+    justify-content: space-between;
+    gap:0.2em;
+    padding-top: 0.2em;
+}
+
+@media (min-width: $medium) {
+    .day-card {
+        display: flex;
+        width: 12rem;
+        padding: 0.8rem;
+    }
+
+    .forecast-icon-wrapper{
+        display: dlex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0;
+    
+        img{
+            width: 2rem;
+        }
+    }
+
+    .forecast-temperature-wrapper{
+        margin-left: auto;
+        flex-direction: column;
+        padding-top: 0;
+    }
+
+    .forecast-date-wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+    }
+}

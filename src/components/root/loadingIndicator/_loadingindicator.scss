@@ -1,0 +1,36 @@
+.loading-wrapper{
+    position: absolute;
+    top:50%;
+    left:50%;
+    translate: -50% -50%;
+
+    h2{
+        padding: 2rem 0;
+    }
+}
+
+.loading-indicator {
+    display: inline-block;
+    width: 8rem;
+    height: 8rem;
+  }
+  .loading-indicator:after {
+    content: " ";
+    display: block;
+    width: 6rem;
+    height: 6rem;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 6px solid rgba(0, 0, 0, 1);
+    border-color: rgba(0, 0, 0, 1) transparent rgba(0, 0, 0, 1) transparent;
+    animation: loading 1.2s linear infinite;
+  }
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  

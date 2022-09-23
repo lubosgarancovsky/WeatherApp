@@ -1,0 +1,16 @@
+.top-bar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.datetime{
+    text-align: center;
+    font-size: 0.8rem;
+    color:$foreground-subtitle;
+    text-align: center;
+    width: 100%;
+    padding: 0 0.3em;
+}

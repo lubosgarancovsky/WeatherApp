@@ -1,0 +1,40 @@
+.search-result{
+    width: 100%;
+    background:transparent;
+    border: none;
+
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0.5rem 1.5rem;
+
+    cursor: pointer;
+}
+
+.search-result:active {
+    background-color: $background-searchbar;
+}
+
+.search-result-city
+{
+    font-size: $font-medium;
+}
+
+.search-result-temperature
+{
+    font-size: $font-regular;
+}
+
+.search-result-temperature{
+    color: $foreground-searchDegree;
+}
+
+@media (min-width: $small) {
+    .search-result{
+        transition: 100ms background-color ease-in;
+    }
+
+    .search-result:hover{
+        background-color: $background-searchbar;
+    }
+}

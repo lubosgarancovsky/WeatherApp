@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import { ScreenToggleContext, LocationContext } from './context/context';
+import './App.scss';
+
+import backgroundImage from './assets/background/background.svg'
+import { SearchScreen } from './containers/searchScreen/SearchScreen';
+import { WeatherScreen } from './containers/weatherScreen/WeatherScreen';
+import { useState } from 'react';
+
 
 function App() {
+  const [isOpen, setOpen] = useState(true)
+  const [location, setLocation] = useState()
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <LocationContext.Provider value={{location, setLocation}}>
+      <ScreenToggleContext.Provider value={{ isOpen, setOpen }}>
+        <div className="App">
+
+          <div className='background'>
+            <img src={backgroundImage} alt='background city panorama' />
+          </div>
+          
+            <WeatherScreen />
+            <SearchScreen />
+        </div>
+      </ScreenToggleContext.Provider>
+    </LocationContext.Provider>
+
   );
 }
 

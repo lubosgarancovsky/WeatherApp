@@ -1,0 +1,33 @@
+.search-wrapper{
+    width: 100%;
+}
+
+.searchbar {
+    margin: 2rem 0;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+
+.searchbar input{
+    background-color: $background-searchbar;
+    border: none;
+    border-radius: 0.2rem;
+    font-size: $font-medium;
+    padding: 0.8rem 1rem;
+    width: 100%;
+
+}
+
+.searchbar input::placeholder {
+    color: $search-placeholder;
+    font-style: italic;
+}
+
+.searchbar-icon{
+    position: absolute;
+    right:1rem;
+    width: 1rem;
+    top: 50%;
+    translate: 0 -50%;
+}

@@ -1,0 +1,107 @@
+.current-weather{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    gap:1.5rem;
+
+    padding: 2rem 1rem;
+}
+
+.row {
+    display: flex;
+    gap:1.5rem;
+}
+
+.column{
+    width: 100%;
+    height: 100%;
+}
+
+
+.weather-wrapper{
+    text-align: center;
+
+    h3{
+        font-weight: 500;
+        font-size: $font-medium;
+    }
+
+    img{
+        width: 2.5rem;
+    }
+}
+
+.temperature-wrapper{
+    display: flex;
+    justify-content: center;
+
+    h1{
+        position: relative;
+        line-height: 1em;
+    }
+
+    h1::after{
+        content: '°C';
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: $foreground-subtitle;
+        position: absolute;
+        top:0.4em;
+        line-height: 1em;
+    }
+
+    h4{
+        padding-top: 0.5rem;
+    }
+}
+
+.lowest-highest-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.highest, .lowest{
+    display: flex;
+    gap: 0.2em;
+    justify-content: center;
+    align-items: center;
+
+    img{
+        height: 0.5em;
+    }
+}
+
+@media (min-width: $xsmall) {
+    .current-weather{
+        width: 28rem;
+    }
+}
+
+@media (min-width: $medium) {
+    .current-weather{
+        grid-template-columns: auto auto;
+    }
+
+    .main-row{
+        flex-direction: column;
+        grid-row: span 2;
+        width: fit-content;
+        justify-self: end;
+        padding-right: 4rem;
+    }
+
+    .lowest-highest-wrapper{
+        flex-direction: row;
+        justify-content: center;
+        gap:3rem;
+    }
+
+    .attributes-row{
+        border-inline: 2px solid rgba(0, 0, 0, 0.2);
+        padding: 0 2rem;
+    }
+}
+

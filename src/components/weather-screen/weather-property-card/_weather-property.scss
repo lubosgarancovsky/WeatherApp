@@ -1,0 +1,28 @@
+.weather-attribute{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.attribute-icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 0.5em;
+
+    img{
+        width: 1.5rem;
+    }
+}
+
+.attribute-title-wrapper{
+    padding-top: 0.2em;
+}
+
+@media (min-width: $medium) {
+    .weather-attribute{
+        width: 5rem;
+    }
+}

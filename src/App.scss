@@ -27,6 +27,25 @@ html {
 }
 
 
+// Osetrenie pre velmi male displaye
+
+@media (max-width: 310px) {
+  html{
+    font-size: 80%;
+  }
+}
+
+@media (max-width: 250px) {
+  html{
+    font-size: 60%;
+  }
+}
+
+// ---------------------------------
+
+
+// Osetrenie pre vacsie displaye
+
 @media (min-width: $medium) {
   html{
       font-size: 120%;

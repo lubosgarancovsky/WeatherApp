@@ -1,9 +1,4 @@
-Weather App
-
-React
-JavaScript
-SCSS
-Open Weather API
+# Weather App
 
 This Weather App is made using React, JavaScript, SCSS, and Open Weather API. It displays current weather and a 3-day forecast for 6 chosen Slovak towns. The app is created using Create React App and requires an API key, which should be placed in a .env file.
 Technologies Used
